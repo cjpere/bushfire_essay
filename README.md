@@ -1,3 +1,9 @@
+<style>
+mark {
+  background-color: yellow;
+  color: black;
+}
+</style>
 # Final Essay: Web-Map on Australia's Bushfires
 
 link: https://myfirewatch.landgate.wa.gov.au/map.html
