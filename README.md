@@ -13,7 +13,7 @@ For my essay I decided to take a look at a web-map about the bushfires in Austra
 - Services: FireWatch is a set of fire monitoring products, services and solutions developed by Landgate Imagery. “FireWatch uses satellite imagery to detect and report on hotspots as they are observed and monitor their subsequent effect on the land”. This information was taken from their website.
 - Data: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
 
-<img src="systemarc.png" />
+![](img/systemarc.png)
 
 # Code
 
@@ -40,21 +40,21 @@ The data sources include the raster data from Landgate. This provides the inform
 
 
 
-**Features of the Map**
+# Features of the Map
 
 - Basemap: Google roadmap view
 - Thematic layers: Satellite view layer and greenness (vegetation) layer
 - Interactive features: zoom, toggle to home view, click, allows you to view pop-ups with information about that data point, the different layers are available to turn on and off, ability to search a specific location
 - Web-map elements: legend, scale (500 km), zoom function, home view
 
-**Strengths**
+# Strengths
 - Easily understandable map, the features are easy to intuitively understand what is happening on the map and how to use it
 - Good basemap use since it is map that most people recognize it gives the map a sense of understanding and familiarity
 - The data for the hotspots is updated several times a day
 - The search feature makes it easy to know if your area/town/city has been affected
 - The disclaimer information about the data and map is obvious and easy to view
 
-**Weaknesses**
+# Weaknesses
 - The pop-up features on the map are hard to click
 - The map does not allow you to move around easily because there is no drag feature so in order to closely examine part of the map you have to zoom in and out
 - They have disclaimers that the data might not be completely accurate because if there is smoke coverage the satellite imagery might not be able to detect the hotspots
