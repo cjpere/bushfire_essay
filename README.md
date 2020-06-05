@@ -69,7 +69,7 @@ The data sources include the raster data from Landgate. This provides the inform
 
 # Strengths vs. Weaknesses
 | **Strengths**                    | **Weaknesses**                 |
-| ----------------------------- | --------------------------- |
+| ------------------------------ | ------------------------- |
 | Easily understandable map, the features are easy to intuitively understand what is happening on the map and how to use it | The pop-up features on the map are hard to click |
 | Good basemap use since it is map that most people recognize it gives the map a sense of understanding and familiarity | The map does not allow you to move around easily because there is no drag feature so in order to closely examine part of the map you have to zoom in and out |
 | The data for the hotspots is updated several times a day | They have disclaimers that the data might not be completely accurate because if there is smoke coverage the satellite imagery might not be able to detect the hotspots |
