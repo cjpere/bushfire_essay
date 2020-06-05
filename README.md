@@ -29,16 +29,22 @@ A List of the libraries, languages and more used for the project:
 The flow between the client and the server in this case is that the client (FireWatch) holds most of the data provided by Landgate and then the web based languages like jQuery, HTML, CSS, etc. allow for the data to be moved onto the server for the public to be able to see. Some of the aspects of the web-map are already on the internet though and do not need that translation onto the web but rather just need to be called correctly to be used on the map. Like the basemap from Google maps and other Google based information.
 As for the responsive design of that map it does support responsive design, the view from the phone, tablet, whatever device it might be is not bad and in some aspects is actually better than the response on the computer. For example it is easier to click is easier on the data points of the phone, tablet, etc. than it is on the computer but on the other devices the legend for what the different data layers are and represent is not even visible whereas they are visible on the computer, that being a big downside to the responsive design of this web map. The only device besides a computer that it shows the legend on is the iPad Pro.
 
+![](img/ipad.png)
 
+![](img/comp.png)
 
 
 # Data Sources
 
 The data sources include the raster data from Landgate. This provides the information for the Hotspot data layers and allows you to view hotspots from the last 0-72 hours. For the map options layer the default, the baselayer, is the Google roadmap view. However there are also options for satellite view and greenness (vegetation view) the sources for these come from Landgate and Google Maps respectively. These layers are not updated as frequently as the hotspot data layers and are still being worked on. The next data layer is raster data that was derived from Landgate data called Burnt Areas. You can look at the burnt areas from this year, last year and two years ago, although this data is even less frequently updated than the map options, there being a possible delay of a month for this layer. The last layer of data is the lightning activity, this layer is also taken from the Landgate satellite imagery and displays any lightning activity for the last 24 hours, 24-48 hours, 48-72 hours. All the data layers consist of raster data because most are derived from the satellite imagery from Landgate, but although they are raster data in this case all the data is also static because they are snapshots of the data at a certain time. You can tell this by looking at the source code of the data. All of it is either under Gstatic (a service used by Google to hold static data) or you can see when you click on the data that it is a snapshot because it is an image. The function works so that when there is new data it is updated and then takes screenshots of the new data and moves the old data either to the next time frame or gets rid of it because it is outside of the 0-72 hour time frame.
 
+![](img/stat.png)
 
+![](img/static.png)
 
+![](img/service.png)
 
+![](img/snapshot.png)
 
 # Features of the Map
 
