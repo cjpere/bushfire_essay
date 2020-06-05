@@ -14,8 +14,11 @@ For my essay I decided to take a look at a web-map about the bushfires in Austra
 - Data: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
 
 ![](img/systemarc.png)
+> View of the folders in the web-map
 
 # Code
+
+**Note**: A lot of their code is hard to read because it has no structure to it.
 
 A List of the libraries, languages and more used for the project:
 - HTML (holds the major code for the documents of the web-map like JS to be displayed on the web)
@@ -30,37 +33,46 @@ The flow between the client and the server in this case is that the client (Fire
 As for the responsive design of that map it does support responsive design, the view from the phone, tablet, whatever device it might be is not bad and in some aspects is actually better than the response on the computer. For example it is easier to click is easier on the data points of the phone, tablet, etc. than it is on the computer but on the other devices the legend for what the different data layers are and represent is not even visible whereas they are visible on the computer, that being a big downside to the responsive design of this web map. The only device besides a computer that it shows the legend on is the iPad Pro.
 
 ![](img/ipad.png)
+> iPad view of the responsive design
 
 ![](img/comp.png)
-
+> Computer view of the web-map
 
 # Data Sources
 
 The data sources include the raster data from Landgate. This provides the information for the Hotspot data layers and allows you to view hotspots from the last 0-72 hours. For the map options layer the default, the baselayer, is the Google roadmap view. However there are also options for satellite view and greenness (vegetation view) the sources for these come from Landgate and Google Maps respectively. These layers are not updated as frequently as the hotspot data layers and are still being worked on. The next data layer is raster data that was derived from Landgate data called Burnt Areas. You can look at the burnt areas from this year, last year and two years ago, although this data is even less frequently updated than the map options, there being a possible delay of a month for this layer. The last layer of data is the lightning activity, this layer is also taken from the Landgate satellite imagery and displays any lightning activity for the last 24 hours, 24-48 hours, 48-72 hours. All the data layers consist of raster data because most are derived from the satellite imagery from Landgate, but although they are raster data in this case all the data is also static because they are snapshots of the data at a certain time. You can tell this by looking at the source code of the data. All of it is either under Gstatic (a service used by Google to hold static data) or you can see when you click on the data that it is a snapshot because it is an image. The function works so that when there is new data it is updated and then takes screenshots of the new data and moves the old data either to the next time frame or gets rid of it because it is outside of the 0-72 hour time frame.
 
 ![](img/stat.png)
+> Static Google layer
 
 ![](img/static.png)
+> Static Google layer
 
 ![](img/service.png)
+> The index to find the snapshot
 
 ![](img/snapshot.png)
+> Snapshot of one of the tile layers to create the map, using OpenLayer
 
 # Features of the Map
 
 - Basemap: Google roadmap view
 - Thematic layers: Satellite view layer and greenness (vegetation) layer
-- Interactive features: zoom, toggle to home view, click, allows you to view pop-ups with information about that data point, the different layers are available to turn on and off, ability to search a specific location
+- Interactive features: zoom, toggle to home view, click, allows you to view pop-ups with information about that data point, the different layers are available to turn on and off, ability to search a specific location, buttons
 - Web-map elements: legend, scale (500 km), zoom function, home view
 
-# Strengths
+![](img/australia.png)
+> Code snippet of button to toggle to Australia
+
+# Strengths vs. Weaknesses
+**Strengths**
 - Easily understandable map, the features are easy to intuitively understand what is happening on the map and how to use it
 - Good basemap use since it is map that most people recognize it gives the map a sense of understanding and familiarity
 - The data for the hotspots is updated several times a day
 - The search feature makes it easy to know if your area/town/city has been affected
 - The disclaimer information about the data and map is obvious and easy to view
 
-# Weaknesses
+**Weaknesses**
 - The pop-up features on the map are hard to click
 - The map does not allow you to move around easily because there is no drag feature so in order to closely examine part of the map you have to zoom in and out
 - They have disclaimers that the data might not be completely accurate because if there is smoke coverage the satellite imagery might not be able to detect the hotspots
