@@ -1,9 +1,3 @@
-<style>
-mark {
-  background-color: yellow;
-  color: black;
-}
-</style>
 # Final Essay: Web-Map on Australia's Bushfires
 
 link: https://myfirewatch.landgate.wa.gov.au/map.html
@@ -14,10 +8,10 @@ For my essay I decided to take a look at a web-map about the bushfires in Austra
 
 # System Architecture
 
-- <mark>Client</mark>: The web client of this map is the website called MyFireWatch, it is a website that records live and recent data about fires, it is focused mainly on Australia but has information for some of the nearby countries like Papua New Guinea and Indonesia.
-- <mark>Server</mark>: The server for this web-map is the MyFireWatch website. That is where all the data is stored and compiled. They also use MapProxy which is a open source tile server for the map tiles of their map.
-- <mark>Services</mark>: FireWatch is a set of fire monitoring products, services and solutions developed by Landgate Imagery. “FireWatch uses satellite imagery to detect and report on hotspots as they are observed and monitor their subsequent effect on the land”. This information was taken from their website.
-- <mark>Data</mark>: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
+- <span style="background-color:yellow">Client</span>: The web client of this map is the website called MyFireWatch, it is a website that records live and recent data about fires, it is focused mainly on Australia but has information for some of the nearby countries like Papua New Guinea and Indonesia.
+- <span style="background-color:yellow">Server</span>: The server for this web-map is the MyFireWatch website. That is where all the data is stored and compiled. They also use MapProxy which is a open source tile server for the map tiles of their map.
+- <span style="background-color:yellow">Services</span>: FireWatch is a set of fire monitoring products, services and solutions developed by Landgate Imagery. “FireWatch uses satellite imagery to detect and report on hotspots as they are observed and monitor their subsequent effect on the land”. This information was taken from their website.
+- <span style="background-color:yellow">Data</span>: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
 
 ![](img/systemarc.png)
 > View of the folders in the web-map
