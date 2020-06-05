@@ -18,7 +18,7 @@ For my essay I decided to take a look at a web-map about the bushfires in Austra
 
 # Code
 
-**Note**: A lot of their code is hard to read because it has no structure to it.
+> **Note**: A lot of their code is hard to read because it has no structure to it.
 
 A List of the libraries, languages and more used for the project:
 - HTML (holds the major code for the documents of the web-map like JS to be displayed on the web)
