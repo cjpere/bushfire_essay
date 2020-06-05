@@ -8,22 +8,22 @@ For my essay I decided to take a look at a web-map about the bushfires in Austra
 
 **System Architecture**
 
-Client: The web client of this map is the website called MyFireWatch, it is a website that records live and recent data about fires, it is focused mainly on Australia but has information for some of the nearby countries like Papua New Guinea and Indonesia.
-Server: The server for this web-map is the MyFireWatch website. That is where all the data is stored and compiled. They also use MapProxy which is a open source tile server for the map tiles of their map.
-Services: FireWatch is a set of fire monitoring products, services and solutions developed by Landgate Imagery. “FireWatch uses satellite imagery to detect and report on hotspots as they are observed and monitor their subsequent effect on the land”. This information was taken from their website.
-Data: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
+- Client: The web client of this map is the website called MyFireWatch, it is a website that records live and recent data about fires, it is focused mainly on Australia but has information for some of the nearby countries like Papua New Guinea and Indonesia.
+- Server: The server for this web-map is the MyFireWatch website. That is where all the data is stored and compiled. They also use MapProxy which is a open source tile server for the map tiles of their map.
+- Services: FireWatch is a set of fire monitoring products, services and solutions developed by Landgate Imagery. “FireWatch uses satellite imagery to detect and report on hotspots as they are observed and monitor their subsequent effect on the land”. This information was taken from their website.
+- Data: The data for this webmap comes from Landgate and their satellite imagery. Other data comes from google and their online web services.
 
 
 **Code**
 
 A List of the libraries, languages and more used for the project:
-HTML (holds the major code for the documents of the web-map like JS to be displayed on the web)
-jQuery (is a Javascript library that allows for easy manipulation and transversal of the things like HTML documents)
-CSS (is the stylesheet language used for the presentation of the web-map)
-OpenLayers (JavaScript library used for displaying map data on the web)
-API library for the Google Cloud Platform
-MapProxy (which is an open source tile server, so it stores the different tiles for the map)
-JavaScript (holds much of the code for the web map)
+- HTML (holds the major code for the documents of the web-map like JS to be displayed on the web)
+- jQuery (is a Javascript library that allows for easy manipulation and transversal of the things like HTML documents)
+- CSS (is the stylesheet language used for the presentation of the web-map)
+- OpenLayers (JavaScript library used for displaying map data on the web)
+- API library for the Google Cloud Platform
+- MapProxy (which is an open source tile server, so it stores the different tiles for the map)
+- JavaScript (holds much of the code for the web map)
 
 The flow between the client and the server in this case is that the client (FireWatch) holds most of the data provided by Landgate and then the web based languages like jQuery, HTML, CSS, etc. allow for the data to be moved onto the server for the public to be able to see. Some of the aspects of the web-map are already on the internet though and do not need that translation onto the web but rather just need to be called correctly to be used on the map. Like the basemap from Google maps and other Google based information.
 As for the responsive design of that map it does support responsive design, the view from the phone, tablet, whatever device it might be is not bad and in some aspects is actually better than the response on the computer. For example it is easier to click is easier on the data points of the phone, tablet, etc. than it is on the computer but on the other devices the legend for what the different data layers are and represent is not even visible whereas they are visible on the computer, that being a big downside to the responsive design of this web map. The only device besides a computer that it shows the legend on is the iPad Pro.
@@ -33,7 +33,7 @@ As for the responsive design of that map it does support responsive design, the 
 
 **Data Sources**
 
-	The data sources include the raster data from Landgate. This provides the information for the Hotspot data layers and allows you to view hotspots from the last 0-72 hours. For the map options layer the default, the baselayer, is the Google roadmap view. However there are also options for satellite view and greenness (vegetation view) the sources for these come from Landgate and Google Maps respectively. These layers are not updated as frequently as the hotspot data layers and are still being worked on. The next data layer is raster data that was derived from Landgate data called Burnt Areas. You can look at the burnt areas from this year, last year and two years ago, although this data is even less frequently updated than the map options, there being a possible delay of a month for this layer. The last layer of data is the lightning activity, this layer is also taken from the Landgate satellite imagery and displays any lightning activity for the last 24 hours, 24-48 hours, 48-72 hours. All the data layers consist of raster data because most are derived from the satellite imagery from Landgate, but although they are raster data in this case all the data is also static because they are snapshots of the data at a certain time. You can tell this by looking at the source code of the data. All of it is either under Gstatic (a service used by Google to hold static data) or you can see when you click on the data that it is a snapshot because it is an image. The function works so that when there is new data it is updated and then takes screenshots of the new data and moves the old data either to the next time frame or gets rid of it because it is outside of the 0-72 hour time frame.
+The data sources include the raster data from Landgate. This provides the information for the Hotspot data layers and allows you to view hotspots from the last 0-72 hours. For the map options layer the default, the baselayer, is the Google roadmap view. However there are also options for satellite view and greenness (vegetation view) the sources for these come from Landgate and Google Maps respectively. These layers are not updated as frequently as the hotspot data layers and are still being worked on. The next data layer is raster data that was derived from Landgate data called Burnt Areas. You can look at the burnt areas from this year, last year and two years ago, although this data is even less frequently updated than the map options, there being a possible delay of a month for this layer. The last layer of data is the lightning activity, this layer is also taken from the Landgate satellite imagery and displays any lightning activity for the last 24 hours, 24-48 hours, 48-72 hours. All the data layers consist of raster data because most are derived from the satellite imagery from Landgate, but although they are raster data in this case all the data is also static because they are snapshots of the data at a certain time. You can tell this by looking at the source code of the data. All of it is either under Gstatic (a service used by Google to hold static data) or you can see when you click on the data that it is a snapshot because it is an image. The function works so that when there is new data it is updated and then takes screenshots of the new data and moves the old data either to the next time frame or gets rid of it because it is outside of the 0-72 hour time frame.
 
 
 
@@ -41,24 +41,24 @@ As for the responsive design of that map it does support responsive design, the 
 
 **Features of the Map**
 
-Basemap: Google roadmap view
-Thematic layers: Satellite view layer and greenness (vegetation) layer
-Interactive features: zoom, toggle to home view, click, allows you to view pop-ups with information about that data point, the different layers are available to turn on and off, ability to search a specific location
-Web-map elements: legend, scale (500 km), zoom function, home view
+- Basemap: Google roadmap view
+- Thematic layers: Satellite view layer and greenness (vegetation) layer
+- Interactive features: zoom, toggle to home view, click, allows you to view pop-ups with information about that data point, the different layers are available to turn on and off, ability to search a specific location
+- Web-map elements: legend, scale (500 km), zoom function, home view
 
 **Strengths**
-Easily understandable map, the features are easy to intuitively understand what is happening on the map and how to use it
-Good basemap use since it is map that most people recognize it gives the map a sense of understanding and familiarity
-The data for the hotspots is updated several times a day
-The search feature makes it easy to know if your area/town/city has been affected
-The disclaimer information about the data and map is obvious and easy to view
+- Easily understandable map, the features are easy to intuitively understand what is happening on the map and how to use it
+- Good basemap use since it is map that most people recognize it gives the map a sense of understanding and familiarity
+- The data for the hotspots is updated several times a day
+- The search feature makes it easy to know if your area/town/city has been affected
+- The disclaimer information about the data and map is obvious and easy to view
 
 **Weaknesses**
-The pop-up features on the map are hard to click
-The map does not allow you to move around easily because there is no drag feature so in order to closely examine part of the map you have to zoom in and out
-They have disclaimers that the data might not be completely accurate because if there is smoke coverage the satellite imagery might not be able to detect the hotspots
-The data for the burnt area can have an update delay of a month
-The map options vegetation layer uses purple and blue to represent dense vegetation which can be confusing
+- The pop-up features on the map are hard to click
+- The map does not allow you to move around easily because there is no drag feature so in order to closely examine part of the map you have to zoom in and out
+- They have disclaimers that the data might not be completely accurate because if there is smoke coverage the satellite imagery might not be able to detect the hotspots
+- The data for the burnt area can have an update delay of a month
+- The map options vegetation layer uses purple and blue to represent dense vegetation which can be confusing
 
 
 **Reflection**
